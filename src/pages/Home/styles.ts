@@ -46,3 +46,16 @@ export const DescriptionTitle = styled.div`
     color: ${(props) => props.theme['base-subtitle']};
   }
 `
+
+export const TitleCoffee = styled.div`
+  max-width: 72.5rem;
+  margin: 2rem auto 3.375rem;
+
+  span {
+    color: ${(props) => props.theme['base-subtitle']};
+    font-family: 'Baloo 2';
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 130%;
+  }
+`

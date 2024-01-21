@@ -7,29 +7,38 @@ import {
   DescriptionContent,
   DescriptionTitle,
   HomeContainer,
+  TitleCoffee,
 } from './styles'
 import { DescriptionCoffee } from './components/DescriptionCoffee'
+import { CardCoffee } from './components/CardCoffee'
 
 export function Home() {
   return (
-    <BackgroundContainer>
-      <HomeContainer>
-        <DescriptionContainer>
-          <DescriptionContent>
-            <DescriptionTitle>
-              <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-              <span>
-                Com o Coffee Delivery você recebe seu café onde estiver, a
-                qualquer hora
-              </span>
-            </DescriptionTitle>
+    <>
+      <BackgroundContainer>
+        <HomeContainer>
+          <DescriptionContainer>
+            <DescriptionContent>
+              <DescriptionTitle>
+                <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+                <span>
+                  Com o Coffee Delivery você recebe seu café onde estiver, a
+                  qualquer hora
+                </span>
+              </DescriptionTitle>
 
-            <DescriptionCoffee />
-          </DescriptionContent>
-          <img src={avatarImage} alt="" />
-        </DescriptionContainer>
-      </HomeContainer>
-      <img src={backgroundImage} id="hero-bg" alt="" />
-    </BackgroundContainer>
+              <DescriptionCoffee />
+            </DescriptionContent>
+            <img src={avatarImage} alt="" />
+          </DescriptionContainer>
+        </HomeContainer>
+        <img src={backgroundImage} id="hero-bg" alt="" />
+      </BackgroundContainer>
+
+      <TitleCoffee>
+        <span>Nossos cafés</span>
+      </TitleCoffee>
+      <CardCoffee />
+    </>
   )
 }
