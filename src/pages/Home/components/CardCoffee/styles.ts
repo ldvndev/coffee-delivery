@@ -5,13 +5,6 @@ export const Container = styled.main`
   margin: 0 auto;
 `
 
-export const CardCoffeeContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 2rem;
-  grid-row-gap: 2.5rem;
-`
-
 export const CardCoffeeContent = styled.div`
   background-color: ${(props) => props.theme['base-card']};
   padding: 0 1.25rem 1.25rem;

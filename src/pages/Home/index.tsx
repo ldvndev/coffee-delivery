@@ -1,3 +1,7 @@
+import { DescriptionCoffee } from './components/DescriptionCoffee'
+import { CardCoffee } from './components/CardCoffee'
+import { coffees } from '../../../data.json'
+
 import backgroundImage from '../../assets/background.svg'
 import avatarImage from '../../assets/avatar.svg'
 
@@ -8,9 +12,8 @@ import {
   DescriptionTitle,
   HomeContainer,
   TitleCoffee,
+  CoffeeList,
 } from './styles'
-import { DescriptionCoffee } from './components/DescriptionCoffee'
-import { CardCoffee } from './components/CardCoffee'
 
 export function Home() {
   return (
@@ -35,10 +38,14 @@ export function Home() {
         <img src={backgroundImage} id="hero-bg" alt="" />
       </BackgroundContainer>
 
-      <TitleCoffee>
-        <span>Nossos cafés</span>
-      </TitleCoffee>
-      <CardCoffee />
+      <CoffeeList>
+        <TitleCoffee>Nossos cafés</TitleCoffee>
+        <div>
+          {coffees.map((coffee) => (
+            <CardCoffee key={coffee.id} coffee={coffee} />
+          ))}
+        </div>
+      </CoffeeList>
     </>
   )
 }

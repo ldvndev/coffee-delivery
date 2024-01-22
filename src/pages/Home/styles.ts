@@ -47,15 +47,26 @@ export const DescriptionTitle = styled.div`
   }
 `
 
-export const TitleCoffee = styled.div`
+export const CoffeeList = styled.section`
   max-width: 72.5rem;
-  margin: 2rem auto 3.375rem;
+  padding: 2rem 1.25rem 9.375rem;
+  margin: 0 auto;
 
-  span {
-    color: ${(props) => props.theme['base-subtitle']};
-    font-family: 'Baloo 2';
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 130%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.375rem;
+
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.5rem;
   }
+`
+export const TitleCoffee = styled.span`
+  color: ${(props) => props.theme['base-subtitle']};
+  font-family: 'Baloo 2';
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 130%;
 `
