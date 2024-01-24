@@ -6,15 +6,21 @@ export const Container = styled.main`
 `
 
 export const CardCoffeeContent = styled.div`
-  background-color: ${(props) => props.theme['base-card']};
-  padding: 0 1.25rem 1.25rem;
-  border-radius: 0.375rem 2.25rem;
-  width: 16rem;
-
+  width: 100%;
+  background: ${(props) => props.theme.colors['base-card']};
+  border-radius: 6px 36px 6px 36px;
+  padding: 1.25rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   text-align: center;
+
+  img {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: -1.25rem;
+  }
 `
 
 export const CoffeeImage = styled.img`
@@ -36,15 +42,15 @@ export const CoffeeTags = styled.div`
   span {
     padding: 0.25rem 0.5rem;
     border-radius: 6.25rem;
-    background-color: ${(props) => props.theme['yellow-light']};
-    color: ${(props) => props.theme['yellow-dark']};
+    background-color: ${(props) => props.theme.colors['yellow-light']};
+    color: ${(props) => props.theme.colors['yellow-dark']};
     text-transform: uppercase;
     font-size: 0.625rem;
   }
 `
 
 export const CoffeeTitle = styled.h3`
-  color: ${(props) => props.theme['base-subtitle']};
+  color: ${(props) => props.theme.colors['base-subtitle']};
   text-align: center;
   font-family: 'Baloo 2';
   font-size: 1.25rem;
@@ -54,37 +60,11 @@ export const CoffeeTitle = styled.h3`
 `
 
 export const CoffeeDescription = styled.span`
-  color: ${(props) => props.theme['base-label']};
+  color: ${(props) => props.theme.colors['base-label']};
   text-align: center;
   font-size: 0.875rem;
   line-height: 130%;
   margin-top: 0.5rem;
-`
-
-export const CoffeePriceContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2.0625rem;
-`
-
-export const CoffeePrice = styled.div`
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-
-  span:first-child {
-    color: ${(props) => props.theme['base-text']};
-    font-size: 0.875rem;
-  }
-
-  span:last-child {
-    font-family: 'Baloo 2';
-    font-size: 1.5rem;
-    font-weight: 800;
-
-    color: ${(props) => props.theme['base-text']};
-  }
 `
 
 export const CountdownContainer = styled.div`
@@ -96,48 +76,70 @@ export const CountdownContainer = styled.div`
     border-radius: 6px;
     padding: 5px;
     border: 0;
-    background: ${(props) => props.theme['purple-dark']};
+    background: ${(props) => props.theme.colors['purple-dark']};
 
     transition: background 0.2s;
 
     &:hover {
-      background: ${(props) => props.theme.purple};
+      background: ${(props) => props.theme.colors.purple};
     }
 
     svg {
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.colors.white};
       border: 0;
     }
   }
 `
 
-export const Countdown = styled.div`
-  padding: 0.5rem;
-  background-color: ${(props) => props.theme['base-button']};
-  border-radius: 0.25rem;
-
+export const CardFooter = styled.div`
+  width: 100%;
   display: flex;
-  gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.0625rem;
 
-  button {
-    background-color: transparent;
+  > div {
     display: flex;
     align-items: center;
-    border: 0;
-  }
+    gap: 3px;
 
-  button svg {
-    color: ${(props) => props.theme.purple};
+    span:first-child {
+      color: ${(props) => props.theme.colors['base-text']};
+      font-size: 0.875rem;
+    }
 
-    transition: all 0.2s;
+    span:last-child {
+      font-family: 'Baloo 2';
+      font-size: 1.5rem;
+      font-weight: 800;
 
-    &:hover {
-      color: ${(props) => props.theme['purple-dark']};
+      color: ${(props) => props.theme.colors['base-text']};
+    }
+
+    p {
+      line-height: 0.75rem;
     }
   }
+`
 
-  span {
-    font-size: 1rem;
-    color: ${(props) => props.theme['base-title']};
+export const AddCartWrapper = styled.div`
+  width: 7.5rem;
+
+  > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${(props) => props.theme.colors['purple-dark']};
+    color: ${(props) => props.theme.colors['base-card']};
+    border-radius: 6px;
+    margin-left: 0.3rem;
+    transition: 0.4s;
+
+    &:hover {
+      background: ${(props) => props.theme.colors.purple};
+    }
   }
 `

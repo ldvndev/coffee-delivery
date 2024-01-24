@@ -1,40 +1,34 @@
 import { Clock, Coffee, Package, ShoppingCart } from 'phosphor-react'
-import { InformationCoffeeWrapper } from './styles'
+
+import { InfoWithIcon } from '../../../../components/InfoWithIcon'
+import { BenefitsContainer } from './styles'
+import { useTheme } from 'styled-components'
 
 export function DescriptionCoffee() {
+  const { colors } = useTheme()
+
   return (
-    <InformationCoffeeWrapper>
-      <div>
-        <ShoppingCart
-          size={32}
-          weight="fill"
-          style={{ backgroundColor: '#C47F17' }}
-        />
-        <span>Compra simples e segura</span>
-      </div>
-
-      <div>
-        <Package
-          size={32}
-          weight="fill"
-          style={{ backgroundColor: '#574F4D' }}
-        />
-        <span>Embalagem mantém o café intacto</span>
-      </div>
-
-      <div>
-        <Clock size={32} weight="fill" style={{ backgroundColor: '#DBAC2C' }} />
-        <span>Entrega rápida e rastreada</span>
-      </div>
-
-      <div>
-        <Coffee
-          size={32}
-          weight="fill"
-          style={{ backgroundColor: '#8047F8' }}
-        />
-        <span>O café chega fresquinho até você</span>
-      </div>
-    </InformationCoffeeWrapper>
+    <BenefitsContainer>
+      <InfoWithIcon
+        iconColor={colors['yellow-dark']}
+        icon={<ShoppingCart weight="fill" />}
+        text="Compra simples e segura"
+      />
+      <InfoWithIcon
+        iconColor={colors['base-text']}
+        icon={<Package weight="fill" />}
+        text="Embalagem mantém o café intacto<"
+      />
+      <InfoWithIcon
+        iconColor={colors.yellow}
+        icon={<Clock weight="fill" />}
+        text="Entrega rápida e rastreada"
+      />
+      <InfoWithIcon
+        iconColor={colors.purple}
+        icon={<Coffee weight="fill" />}
+        text="O café chega fresquinho até você"
+      />
+    </BenefitsContainer>
   )
 }

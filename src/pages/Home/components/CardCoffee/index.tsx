@@ -1,5 +1,5 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
-
+import { ShoppingCart } from 'phosphor-react'
+import { QuantityInput } from '../../../../components/QuantityInput'
 import {
   Container,
   CardCoffeeContent,
@@ -7,10 +7,8 @@ import {
   CoffeeTags,
   CoffeeTitle,
   CoffeeDescription,
-  CoffeePriceContainer,
-  CoffeePrice,
-  Countdown,
-  CountdownContainer,
+  AddCartWrapper,
+  CardFooter,
 } from './styles'
 
 interface CardCoffeeProps {
@@ -37,27 +35,19 @@ export function CardCoffee({ coffee }: CardCoffeeProps) {
         <CoffeeTitle>{coffee.title}</CoffeeTitle>
         <CoffeeDescription>{coffee.description}</CoffeeDescription>
 
-        <CoffeePriceContainer>
-          <CoffeePrice>
+        <CardFooter>
+          <div>
             <span>R$</span>
             <span>{coffee.price}</span>
-          </CoffeePrice>
+          </div>
 
-          <CountdownContainer>
-            <Countdown>
-              <button>
-                <Minus size={14} />
-              </button>
-              <span>01</span>
-              <button>
-                <Plus size={14} />
-              </button>
-            </Countdown>
+          <AddCartWrapper>
+            <QuantityInput />
             <button>
               <ShoppingCart size={22} weight="fill" />
             </button>
-          </CountdownContainer>
-        </CoffeePriceContainer>
+          </AddCartWrapper>
+        </CardFooter>
       </CardCoffeeContent>
     </Container>
   )

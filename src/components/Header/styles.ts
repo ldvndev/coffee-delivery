@@ -15,34 +15,34 @@ export const Navigation = styled.aside`
   align-items: center;
   gap: 0.75rem;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    border-radius: 0.375rem;
-
-    background: ${(props) => props.theme['purple-light']};
-    padding: 0.5rem;
-
-    span {
-      color: ${(props) => props.theme['purple-dark']};
-      font-size: 0.875rem;
-      font-weight: 400;
-      line-height: 130%;
-    }
-
-    svg {
-      color: ${(props) => props.theme.purple};
-    }
-  }
-
   a {
     border-radius: 0.375rem;
     padding: 0.5rem;
-    background: ${(props) => props.theme['yellow-light']};
+    background: ${(props) => props.theme.colors['yellow-light']};
 
     svg {
-      color: ${(props) => props.theme['yellow-dark']};
+      color: ${(props) => props.theme.colors['yellow-dark']};
     }
+  }
+`
+export const HeaderButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+
+  border: 0;
+  background: ${(props) => props.theme.colors['purple-light']};
+  padding: 0.5rem;
+
+  span {
+    color: ${(props) => props.theme.colors['purple-dark']};
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  svg {
+    color: ${(props) => props.theme.colors.purple};
   }
 `

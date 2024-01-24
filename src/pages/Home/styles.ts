@@ -38,12 +38,12 @@ export const DescriptionTitle = styled.div`
 
   > h1 {
     font-size: 3rem;
-    color: ${(props) => props.theme['base-title']};
+    color: ${(props) => props.theme.colors['base-title']};
   }
 
   > span {
     font-size: 1.25rem;
-    color: ${(props) => props.theme['base-subtitle']};
+    color: ${(props) => props.theme.colors['base-subtitle']};
   }
 `
 
@@ -64,7 +64,7 @@ export const CoffeeList = styled.section`
   }
 `
 export const TitleCoffee = styled.span`
-  color: ${(props) => props.theme['base-subtitle']};
+  color: ${(props) => props.theme.colors['base-subtitle']};
   font-family: 'Baloo 2';
   font-size: 2rem;
   font-weight: 800;
