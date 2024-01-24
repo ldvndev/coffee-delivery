@@ -10,19 +10,32 @@ import {
   AddCartWrapper,
   CardFooter,
 } from './styles'
+import { useState } from 'react'
+
+export interface Coffee {
+  id: string
+  title: string
+  description: string
+  tags: string[]
+  price: string
+  image: string
+}
 
 interface CardCoffeeProps {
-  coffee: {
-    id: string
-    title: string
-    description: string
-    tags: string[]
-    price: string
-    image: string
-  }
+  coffee: Coffee
 }
 
 export function CardCoffee({ coffee }: CardCoffeeProps) {
+  const [quantity, setQuantity] = useState(1)
+
+  function handleIncrease() {
+    setQuantity((state) => state + 1)
+  }
+
+  function handleDecrease() {
+    setQuantity((state) => state - 1)
+  }
+
   return (
     <Container>
       <CardCoffeeContent>
@@ -42,7 +55,11 @@ export function CardCoffee({ coffee }: CardCoffeeProps) {
           </div>
 
           <AddCartWrapper>
-            <QuantityInput />
+            <QuantityInput
+              onIncrease={handleIncrease}
+              onDecrease={handleDecrease}
+              quantity={quantity}
+            />
             <button>
               <ShoppingCart size={22} weight="fill" />
             </button>

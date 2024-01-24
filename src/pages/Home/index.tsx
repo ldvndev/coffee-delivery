@@ -1,7 +1,7 @@
 import { DescriptionCoffee } from './components/DescriptionCoffee'
 import { CardCoffee } from './components/CardCoffee'
-import { coffees } from '../../../data.json'
 
+import { coffees } from '../../../data'
 import avatarImage from '../../assets/avatar.svg'
 import backgroundImage from '../../assets/background.svg'
 
