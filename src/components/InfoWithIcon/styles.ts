@@ -6,7 +6,7 @@ export const InfoWithIconContainer = styled.div`
   gap: 0.75rem;
 `
 interface IconContainerProps {
-  iconColor: string
+  $iconColor: string
 }
 
 export const IconContainer = styled.div<IconContainerProps>`
@@ -14,7 +14,7 @@ export const IconContainer = styled.div<IconContainerProps>`
   height: 2rem;
   border-radius: 50%;
 
-  background: ${({ iconColor }) => iconColor};
+  background: ${({ $iconColor }) => $iconColor};
   color: ${(props) => props.theme.colors.white};
 
   display: flex;

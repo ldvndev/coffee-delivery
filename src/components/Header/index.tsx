@@ -1,27 +1,34 @@
-import { Link } from 'react-router-dom'
-
 import { MapPin, ShoppingCart } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart'
+
 import logoImage from '../../assets/logo.svg'
 
-import { HeaderButton, HeaderContainer, Navigation } from './styles'
+import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
 
 export function Header() {
+  const { cartQuantity } = useCart()
+
   return (
     <HeaderContainer>
-      <Link to={'/'}>
-        <img src={logoImage} alt="" />
-      </Link>
+      <div className="container">
+        <NavLink to="/">
+          <img src={logoImage} alt="" />
+        </NavLink>
 
-      <Navigation>
-        <HeaderButton variant="purple">
-          <MapPin size={22} weight="fill" />
-          <span>Porto Alegre, RS</span>
-        </HeaderButton>
-
-        <Link to={'/ShoppingCart'}>
-          <ShoppingCart size={22} weight="fill" />
-        </Link>
-      </Navigation>
+        <HeaderButtonsContainer>
+          <HeaderButton variant="purple">
+            <MapPin size={20} weight="fill" />
+            Porto Alegre, RS
+          </HeaderButton>
+          <NavLink to="/completeOrder">
+            <HeaderButton variant="yellow">
+              {cartQuantity >= 1 && <span>{cartQuantity}</span>}
+              <ShoppingCart size={20} weight="fill" />
+            </HeaderButton>
+          </NavLink>
+        </HeaderButtonsContainer>
+      </div>
     </HeaderContainer>
   )
 }
