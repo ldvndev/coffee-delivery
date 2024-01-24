@@ -11,6 +11,7 @@ import {
   CardFooter,
 } from './styles'
 import { useState } from 'react'
+import { useCart } from '../../../../hooks/useCart'
 
 export interface Coffee {
   id: string
@@ -27,6 +28,12 @@ interface CardCoffeeProps {
 
 export function CardCoffee({ coffee }: CardCoffeeProps) {
   const [quantity, setQuantity] = useState(1)
+  const { addCoffeeToCart } = useCart()
+
+  function handleAddToCart() {
+    const coffeeToAdd = { ...coffee, quantity: 1 }
+    addCoffeeToCart(coffeeToAdd)
+  }
 
   function handleIncrease() {
     setQuantity((state) => state + 1)
@@ -60,7 +67,7 @@ export function CardCoffee({ coffee }: CardCoffeeProps) {
               onDecrease={handleDecrease}
               quantity={quantity}
             />
-            <button>
+            <button onClick={handleAddToCart}>
               <ShoppingCart size={22} weight="fill" />
             </button>
           </AddCartWrapper>
