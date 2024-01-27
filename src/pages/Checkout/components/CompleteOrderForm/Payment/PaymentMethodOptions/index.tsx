@@ -1,6 +1,7 @@
 import { Bank, CreditCard, Money } from 'phosphor-react'
-import { PaymentMethodOptionsContainer } from './styled'
 import { PaymentMethodInput } from '../PaymentMethodInput'
+
+import { PaymentMethodOptionsContainer } from './styled'
 
 export const paymentMethods = {
   credit: {

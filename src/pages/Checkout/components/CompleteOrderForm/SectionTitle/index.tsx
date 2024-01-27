@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import { SectionTitleContainer } from './styles'
 
 interface SectionTitleProps {
