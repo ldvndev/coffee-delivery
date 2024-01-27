@@ -1,5 +1,8 @@
 import { ShoppingCart } from 'phosphor-react'
 import { QuantityInput } from '../../../../components/QuantityInput'
+import { useState } from 'react'
+import { useCart } from '../../../../hooks/useCart'
+
 import {
   Container,
   CardCoffeeContent,
@@ -10,8 +13,6 @@ import {
   AddCartWrapper,
   CardFooter,
 } from './styles'
-import { useState } from 'react'
-import { useCart } from '../../../../hooks/useCart'
 
 export interface Coffee {
   id: string

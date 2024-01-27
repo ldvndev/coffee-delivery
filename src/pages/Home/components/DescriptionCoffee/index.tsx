@@ -17,7 +17,7 @@ export function DescriptionCoffee() {
       <InfoWithIcon
         iconColor={colors['base-text']}
         icon={<Package weight="fill" />}
-        text="Embalagem mantém o café intacto<"
+        text="Embalagem mantém o café intacto"
       />
       <InfoWithIcon
         iconColor={colors.yellow}
