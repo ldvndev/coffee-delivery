@@ -13,6 +13,7 @@ import {
   AddCartWrapper,
   CardFooter,
 } from './styles'
+import { formatMoney } from '../../../../utils/formatMoney'
 
 export interface Coffee {
   id: string
@@ -59,7 +60,7 @@ export function CardCoffee({ coffee }: CardCoffeeProps) {
         <CardFooter>
           <div>
             <span>R$</span>
-            <span>{coffee.price}</span>
+            <span>{formatMoney(coffee.price)}</span>
           </div>
 
           <AddCartWrapper>
