@@ -1,18 +1,24 @@
+<div align='center'><img style="width:8%" src='./src/assets/logo.svg'/></div>
+
 ### Description
 
 <p>A coffee delivery app that connects coffee lovers to the best local cafes. 
 Enjoy the convenience of having your favorite coffee delivered to your door by 
 exploring a variety of quality options. 🚀☕<p>
-
-### Screenshots of the Project
+ 
+### Screenshots of the Project 📸
 
 <h3 align='left'>Home Page</h3>
 
-<img src='./public/HomePage.png'/>
+<div align='center'>
+  <img style="width:75%"src='./public/HomePage.png'/>
+</div>
 
-<h3 align='left'>Checkout Page</h3>
-<img src='./public/Checkout.png'/>
+<h3 align='left'>Checkout Page </h3>
 
+<div align='center'>
+  <img style="width:75%"src='./public/Checkout.png'/>
+</div>
 
 ### Contribution
 
