@@ -9,16 +9,10 @@ exploring a variety of quality options. 🚀☕<p>
 ### Screenshots of the Project 📸
 
 <h3 align='left'>Home Page</h3>
-
-<div align='center'>
-  <img style="width:75%"src='./public/HomePage.png'/>
-</div>
+<img src='./public/HomePage.png'/>
 
 <h3 align='left'>Checkout Page </h3>
-
-<div align='center'>
-  <img style="width:75%"src='./public/Checkout.png'/>
-</div>
+<img src='./public/Checkout.png'/>
 
 ### Contribution
 
