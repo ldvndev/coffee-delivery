@@ -11,11 +11,11 @@ interface CartContextType {
   cartQuantity: number
   cartItemsTotal: number
   addCoffeeToCart: (coffee: CartItem) => void
+  removeCartItem: (cartItemId: number) => void
   changeCartItemQuantity: (
     cartItemId: string,
     type: 'increase' | 'decrease',
   ) => void
-  removeCartItem: (cartItemId: number) => void
 }
 
 interface CartContextProviderProps {

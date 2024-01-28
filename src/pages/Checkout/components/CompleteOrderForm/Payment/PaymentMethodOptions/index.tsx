@@ -21,7 +21,6 @@ export const paymentMethods = {
 export function PaymentMethodOptions() {
   return (
     <PaymentMethodOptionsContainer>
-      {' '}
       {Object.entries(paymentMethods).map(([key, { label, icon }]) => (
         <PaymentMethodInput
           key={label}
